@@ -1,0 +1,332 @@
+---
+layout: default
+title: Daily Living
+permalink: /daily-living/
+---
+
+<style>
+  .dl-section {
+    padding-bottom: 4rem;
+  }
+  .dl-section + .dl-section {
+    border-top: 1px solid rgba(148,163,184,0.12);
+    padding-top: 4rem;
+  }
+
+  .section-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.4rem;
+  }
+  .section-emoji { font-size: 1.85rem; line-height: 1; }
+  .section-sub {
+    font-size: 1rem;
+    color: #64748b;
+    font-weight: 300;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .prose-body {
+    max-width: 48rem;
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: #475569;
+    margin-left: 3rem;
+  }
+  .dark .prose-body { color: #94a3b8; }
+  .prose-body p + p { margin-top: 1.2rem; }
+
+  /* Timeline */
+  .timeline { margin-left: 3rem; position: relative; max-width: 42rem; }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 0.65rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 2px;
+    background: rgba(148,163,184,0.2);
+    border-radius: 2px;
+  }
+  .tl-item {
+    display: flex;
+    gap: 1.4rem;
+    padding: 0.6rem 0;
+    position: relative;
+  }
+  .tl-dot {
+    flex-shrink: 0;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    border: 2px solid;
+    background: white;
+    margin-top: 0.15rem;
+    z-index: 1;
+  }
+  .dark .tl-dot { background: #0f172a; }
+  .tl-time {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    margin-bottom: 0.15rem;
+  }
+  .tl-label {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.1rem;
+  }
+  .dark .tl-label { color: #e2e8f0; }
+  .tl-note {
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.5;
+  }
+
+  /* Meal cards */
+  .meal-grid {
+    margin-left: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    max-width: 52rem;
+  }
+  .meal-card {
+    border-radius: 12px;
+    border: 1px solid rgba(148,163,184,0.15);
+    background: #f8fafc;
+    padding: 1.1rem 1.2rem 1.3rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .dark .meal-card {
+    background: rgba(255,255,255,0.03);
+    border-color: rgba(148,163,184,0.1);
+  }
+  .meal-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.09);
+  }
+  .dark .meal-card:hover { box-shadow: 0 10px 24px rgba(0,0,0,0.3); }
+  .meal-time {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .meal-emoji { font-size: 1.6rem; margin-bottom: 0.5rem; }
+  .meal-name {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+  }
+  .dark .meal-name { color: #e2e8f0; }
+  .meal-note {
+    font-size: 0.76rem;
+    color: #94a3b8;
+    line-height: 1.5;
+  }
+
+  /* Coffee block */
+  .coffee-block {
+    margin-left: 3rem;
+    max-width: 42rem;
+    border-radius: 14px;
+    border: 1px solid rgba(180,120,60,0.2);
+    background: rgba(251,237,213,0.25);
+    padding: 1.4rem 1.6rem;
+  }
+  .dark .coffee-block {
+    background: rgba(120,70,20,0.12);
+    border-color: rgba(180,120,60,0.15);
+  }
+  .coffee-block p {
+    font-size: 0.92rem;
+    color: #78350f;
+    line-height: 1.8;
+  }
+  .dark .coffee-block p { color: #d97706; }
+  .coffee-block p + p { margin-top: 0.8rem; }
+</style>
+
+
+<!-- PAGE HEADER -->
+<header class="mb-12">
+  <h1 class="text-5xl font-extrabold dark:text-white tracking-tight mb-4">Daily Living</h1>
+  <p class="text-slate-500 text-lg font-light">How I structure my days, what I eat, how I move.</p>
+</header>
+
+
+<!-- SECTION 1 — MY DAY -->
+<section class="dl-section" id="sec-day">
+  <div class="section-heading">
+    <span class="section-emoji">☀️</span>
+    <h2 class="text-3xl font-extrabold dark:text-white tracking-tight">What my normal day looks like</h2>
+  </div>
+  <p class="section-sub">A typical day, kept simple and consistent.</p>
+
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-dot" style="border-color:#818cf8"></div>
+      <div>
+        <div class="tl-time" style="color:#818cf8">10:00 AM</div>
+        <div class="tl-label">Wake up</div>
+        <div class="tl-note">Consistent start. Freshen up, ease in — no rushing.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot" style="border-color:#f59e0b"></div>
+      <div>
+        <div class="tl-time" style="color:#f59e0b">Breakfast</div>
+        <div class="tl-label">Eggs</div>
+        <div class="tl-note">Boiled or scrambled. Simple and clean.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot" style="border-color:#d97706"></div>
+      <div>
+        <div class="tl-time" style="color:#d97706">10:30 AM</div>
+        <div class="tl-label">Coffee — alone</div>
+        <div class="tl-note">First coffee, post-breakfast. No phone. Just stillness before the day starts.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot" style="border-color:#38bdf8"></div>
+      <div>
+        <div class="tl-time" style="color:#38bdf8">11:30 AM</div>
+        <div class="tl-label">Study — deep focus</div>
+        <div class="tl-note">Currently studying for a certification exam.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot" style="border-color:#f472b6"></div>
+      <div>
+        <div class="tl-time" style="color:#f472b6">1:00 PM</div>
+        <div class="tl-label">Lunch + short break</div>
+        <div class="tl-note">Chicken steak and rice.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot" style="border-color:#a78bfa"></div>
+      <div>
+        <div class="tl-time" style="color:#a78bfa">Afternoon</div>
+        <div class="tl-label">Nap</div>
+        <div class="tl-note">A short rest before the work shift begins.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot" style="border-color:#38bdf8"></div>
+      <div>
+        <div class="tl-time" style="color:#38bdf8">2:30 PM – 3:30 PM</div>
+        <div class="tl-label">Work</div>
+        <div class="tl-note">Meetings, troubleshooting, documentation.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot" style="border-color:#34d399"></div>
+      <div>
+        <div class="tl-time" style="color:#34d399">5:30 PM – 2:00 AM</div>
+        <div class="tl-label">Work — main shift</div>
+        <div class="tl-note">The longest and most intensive block of the day.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot" style="border-color:#818cf8"></div>
+      <div>
+        <div class="tl-time" style="color:#818cf8">2:30 – 3:00 AM</div>
+        <div class="tl-label">Wind down & sleep</div>
+        <div class="tl-note">Screens off. Quiet. Lights out.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SECTION 2 — FOOD -->
+<section class="dl-section" id="sec-food">
+  <div class="section-heading">
+    <span class="section-emoji">🍽️</span>
+    <h2 class="text-3xl font-extrabold dark:text-white tracking-tight">Food habits</h2>
+  </div>
+  <p class="section-sub">Clean, consistent, and cooked at home.</p>
+
+  <div class="prose-body mb-8">
+    <p>
+      I haven't consumed sugar for over 18 months. No aerated drinks, no processed snacks.
+      I cook almost everything myself, which keeps me in control of what goes in.
+    </p>
+  </div>
+
+  <div class="meal-grid">
+
+    <div class="meal-card">
+      <div class="meal-time" style="color:#f59e0b">Breakfast</div>
+      <div class="meal-emoji">🥚</div>
+      <div class="meal-name">Eggs</div>
+      <div class="meal-note">Boiled or scrambled. High protein, keeps me full until lunch without being heavy.</div>
+    </div>
+
+    <div class="meal-card">
+      <div class="meal-time" style="color:#f472b6">Lunch</div>
+      <div class="meal-emoji">🍗</div>
+      <div class="meal-name">Chicken steak & rice</div>
+      <div class="meal-note">Pan-seared chicken, plain rice. Protein and carbs — no overthinking.</div>
+    </div>
+
+    <div class="meal-card">
+      <div class="meal-time" style="color:#34d399">Evening snack</div>
+      <div class="meal-emoji">🌱</div>
+      <div class="meal-name">Black chana or sweet potato</div>
+      <div class="meal-note">Complex carbs and fibre — keeps energy steady without a spike.</div>
+    </div>
+
+    <div class="meal-card">
+      <div class="meal-time" style="color:#818cf8">Dinner</div>
+      <div class="meal-emoji">🍽️</div>
+      <div class="meal-name">Chicken steak & rice</div>
+      <div class="meal-note">Same as lunch. Consistency removes decision fatigue.</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SECTION 3 — COFFEE -->
+<section class="dl-section" id="sec-coffee">
+  <div class="section-heading">
+    <span class="section-emoji">☕</span>
+    <h2 class="text-3xl font-extrabold dark:text-white tracking-tight">Coffee</h2>
+  </div>
+  <p class="section-sub">Not just a drink — a small, deliberate ritual.</p>
+
+  <div class="coffee-block">
+    <p>
+      My first coffee of the day is always after breakfast, never before. I have it alone — no
+      phone, no conversation, no background noise if I can help it. Just the cup and a few quiet minutes
+      before the day really starts.
+    </p>
+    <p>
+      It's a small ritual, but it matters. That window between breakfast and sitting down to study
+      is mine. The coffee is just the anchor for it.
+    </p>
+    <p>
+      I keep it black or with minimal milk. No sugar — that's been gone for a long time.
+      The taste is enough.
+    </p>
+  </div>
+</section>
